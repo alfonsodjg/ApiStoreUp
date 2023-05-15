@@ -1,8 +1,7 @@
-package com.apistoreup.ApiStoreUp.UserService;
+package com.apistoreup.ApiStoreUp.services;
 
-import com.apistoreup.ApiStoreUp.UserModel.UserModel;
-import com.apistoreup.ApiStoreUp.UserRepository.UserRepository;
-import com.apistoreup.ApiStoreUp.autsecurity.SecurityConfig;
+import com.apistoreup.ApiStoreUp.models.UserModel;
+import com.apistoreup.ApiStoreUp.repositorys.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

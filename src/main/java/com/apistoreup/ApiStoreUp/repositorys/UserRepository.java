@@ -1,6 +1,6 @@
-package com.apistoreup.ApiStoreUp.UserRepository;
+package com.apistoreup.ApiStoreUp.repositorys;
 
-import com.apistoreup.ApiStoreUp.UserModel.UserModel;
+import com.apistoreup.ApiStoreUp.models.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
