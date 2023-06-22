@@ -22,6 +22,9 @@ public class UserAdmiService {
     }
     public void insertUserAdmi(@RequestBody UserAdmiModel userAdmiModel){
         userAdmiModel.setPassword(passwordEncoder.encode(userAdmiModel.getPassword()));
+        System.out.println("Name: " + userAdmiModel.getName());
+        System.out.println("Email: " + userAdmiModel.getEmail());
+        System.out.println("Password: " + userAdmiModel.getPassword());
         userAdmiRepository.save(userAdmiModel);
     }
     public boolean autenticationAdmi(String email,String password){
