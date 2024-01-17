@@ -27,4 +27,7 @@ public class DatosCategoriaService {
     public List<TipoCategoria> getAllTipoCategorias() {
         return tipoCategoriaRepository.findAll();
     }
+    public List<DatosCategoriaModel> getTiendasByCategoria(String categoria) {
+        return datosCategoriaRepository.findByTipoCategoria_Tipo(categoria);
+    }
 }

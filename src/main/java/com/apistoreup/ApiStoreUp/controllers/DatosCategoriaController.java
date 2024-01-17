@@ -4,10 +4,8 @@ import com.apistoreup.ApiStoreUp.models.DatosCategoriaModel;
 import com.apistoreup.ApiStoreUp.models.TipoCategoria;
 import com.apistoreup.ApiStoreUp.services.DatosCategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +28,10 @@ public class DatosCategoriaController {
     @RequestMapping(value = "api/insert/dates/categoria",method = RequestMethod.POST)
     public void inserDates(@RequestBody DatosCategoriaModel datosCategoriaModel){
         this.datosCategoriaService.insertDatosCategoria(datosCategoriaModel);
+    }
+    @RequestMapping(value = "api/getListasByTipo", method = RequestMethod.GET)
+    public List<DatosCategoriaModel> getByType(@RequestParam("tipoCategoria") String tipoCategoria){
+        return this.datosCategoriaService.getTiendasByCategoria(tipoCategoria);
     }
 }
 
